@@ -32,6 +32,10 @@ To see how fingerprint clustering works in practice, we can run it on a sample d
 When you run clustering algorithm on it 
 
 ```python
+
+# Copyright 2010, Google Inc.
+# All rights reserved.
+
 import unicodedata
 import re
 import pandas as pd
