@@ -1,10 +1,9 @@
-### Understanding Fingerprint Clustering in OpenRefine
-When I first learned about Google/OpenRefine, I was fascinated by its ability to clean and organize messy data. One of the most interesting features I came across was clustering algorithms, especially the fingerprint method.
+# Data Cleaning and Deduplication with Python - Fingerprint Clustering in OpenRefine
+
+If you work with data—whether as a data scientist, analyst, engineer, or just in your daily tasks—you’ve probably realized that data cleaning and preprocessing are essential for accurate analysis. Last week, during my Information Visualization course, I learned a new way to clean messy data.  I got to know about OpenRefine (by Google), a tool that helps fix and organize data easily. One of its most interesting features is its clustering methods, especially the fingerprint algorithm. The tool is required to use the algorithm, but I wanted to make it more accessible. So, I converted the Java code to Python for easier use in my daily tasks.
 
 ### What is Fingerprint Clustering?
 Imagine you have a dataset with many variations of the same name due to typos, extra spaces, or different formats. The fingerprint algorithm helps identify and group these similar values by converting them into a standardized key.
-
-Official Link of OpenRefine -> https://openrefine.org/docs/technical-reference/clustering-in-depth
 
 ### How Does It Work?
 The fingerprint algorithm transforms each value into a simplified version by following these steps:
@@ -22,7 +21,9 @@ The fingerprint algorithm transforms each value into a simplified version by fol
 
 Google Colab Code -> https://colab.research.google.com/drive/1ZEhe9pTaNsrnlEs9V2AVZJTkN8li6nhp#scrollTo=avXBW9bp4TOT
 
-Here's a sample dataset we have
+To see how fingerprint clustering works in practice, we can run it on a sample dataset using Google Colab. The dataset contains multiple variations of names, which can cause inconsistencies in data analysis.
+
+
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5da7e522-d77f-4c71-8511-c03bb3ed51e2" width="300">
@@ -119,12 +120,25 @@ if __name__ == "__main__":
     print(f"Clustered results saved at: {output_file}")
 ```
 
-Output ->
+
+### Output
+
+Even though the names are written differently, the fingerprint method converts them into the same key, helping to group them together. 
+
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/5da7e522-d77f-4c71-8511-c03bb3ed51e2](https://github.com/user-attachments/assets/ea4dec2b-7242-434b-a2e6-92f01a7a6714" width="300">
+  <img src="https://github.com/user-attachments/assets/73a91b58-952c-4d31-a7af-ed8c1e3c2ce9" width = "700">
 </div>
 
 
-Even though they are written differently, the fingerprint method converts them into the same key, helping to group them together.
+
+
+
+The results aren’t perfect, but the fingerprint method still does a great job at grouping similar names. While some variations may not cluster exactly as expected, the overall process helps clean and standardize messy data effectively. With further refinements, it can be even more accurate and useful for real-world applications.
+
+By applying fingerprint clustering, we can clean, standardize, and merge inconsistent text data efficiently. This not only improves data quality but also enhances searchability, analysis, and decision-making.
+
+
+Read more about OpenRefine (Official Link) -> https://openrefine.org/docs/technical-reference/clustering-in-depth
+
 
